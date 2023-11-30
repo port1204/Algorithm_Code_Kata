@@ -5,7 +5,7 @@ public class Solution
         bool answer = true;
         int sum = 0;
         int test = x;
-        while(x > 0)
+        while(test > 0)
         {
             if ( test < 10){
                 sum += test;
