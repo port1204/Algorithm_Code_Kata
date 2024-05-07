@@ -12,45 +12,47 @@ namespace CodingTest2
             {
                 string[] input = Console.ReadLine().Split(" ");
 
-                switch (input[0])
+                if (input[0] == "push")
                 {
-                    case "push":
-                        int X = int.Parse(input[1]);
-                        MyStack.Push(X);
-                        break;
-                    case "pop":
-                        if (MyStack.Count == 0)
-                        {
-                            Answer.Add("-1");
-                        }
-                        else
-                        {
-                            Answer.Add(MyStack.Pop().ToString());
-                        }
-                        break;
-                    case "size":
+                    int X = int.Parse(input[1]);
+                    MyStack.Push(X); 
+                }
+                else if (input[0] == "pop")
+                {
+                    if (MyStack.Count == 0)
+                    {
+                        Answer.Add("-1");
+                    }
+                    else
+                    {
+                        Answer.Add(MyStack.Pop().ToString());
+                    }
+                }
+                else if (input[0] == "size")
+                {
                         Answer.Add(MyStack.Count.ToString());
-                        break;
-                    case "empty":
-                        if(MyStack.Count == 0)
-                        {
-                            Answer.Add("1");
-                        }
-                        else
-                        {
-                            Answer.Add("0");
-                        }
-                        break;
-                    case "top":
-                        if (MyStack.Count == 0)
-                        {
-                            Answer.Add("-1");
-                        }
-                        else
-                        {
-                            Answer.Add(MyStack.Peek().ToString());
-                        }
-                        break;
+                }
+                else if (input[0] == "empty")
+                {
+                    if (MyStack.Count == 0)
+                    {
+                        Answer.Add("1");
+                    }
+                    else
+                    {
+                        Answer.Add("0");
+                    }
+                }
+                else if (input[0] == "top")
+                {
+                    if (MyStack.Count == 0)
+                    {
+                        Answer.Add("-1");
+                    }
+                    else
+                    {
+                        Answer.Add(MyStack.Peek().ToString());
+                    }
                 }
             }
 
