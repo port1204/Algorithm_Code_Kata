@@ -1,3 +1,5 @@
+using System.Text;
+
 namespace CodingTest2
 {
     internal class Program
@@ -5,7 +7,7 @@ namespace CodingTest2
         static void Main(string[] args)
         {
             int T = int.Parse(Console.ReadLine());
-            List<string> Answer = new List<string>();
+            StringBuilder Answer = new StringBuilder();
             int a = 0;
 
             for (int i = 0; i < T; ++i)
@@ -29,15 +31,11 @@ namespace CodingTest2
 
                 if ( a == 0 )
                 {
-                    Answer.Add("YES");
-                }
-                else if ( a < 0)
-                {
-                    Answer.Add("NO");
+                    Answer.Append("YES\n");
                 }
                 else
                 {
-                    Answer.Add("NO");
+                    Answer.Append("NO\n");
                 }
 
                 a = 0;
@@ -45,10 +43,7 @@ namespace CodingTest2
 
             Console.Clear();
 
-            foreach (var answer in Answer)
-            {
-                Console.WriteLine(answer);
-            }
+            Console.WriteLine(Answer);
         }
     }
 }
