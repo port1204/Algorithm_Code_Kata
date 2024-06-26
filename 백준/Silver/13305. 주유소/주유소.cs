@@ -1,16 +1,14 @@
-using System.ComponentModel;
-
 namespace testcoding
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            int answer = 0;
+            long answer = 0;
             int N = int.Parse(Console.ReadLine());
-            int[] Price = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-            int[] City = Array.ConvertAll(Console.ReadLine().Split(), int.Parse);
-            int LowCity = City[0];
+            long[] Price = Array.ConvertAll(Console.ReadLine().Split(), long.Parse);
+            long[] City = Array.ConvertAll(Console.ReadLine().Split(), long.Parse);
+            long LowCity = City[0];
 
             answer += City[0] * Price[0];
 
