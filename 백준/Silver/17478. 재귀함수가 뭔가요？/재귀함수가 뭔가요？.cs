@@ -16,6 +16,7 @@ namespace testcoding
                 Rec(N, 0);
                 sw.WriteLine(sb);
             } // using
+        } // Main
 
         static void Rec(int N, int i)
         {
@@ -35,6 +36,6 @@ namespace testcoding
             }
             sb.AppendLine($"{U}라고 답변하였지.");
         }
-    } // Main
+
     } // class
 } // namespace
